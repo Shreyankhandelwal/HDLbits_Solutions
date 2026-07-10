@@ -3,6 +3,10 @@ module top_module(
     output [7:0] w, x, y, z
 );
 
+// The concatenation operator {a,b,c} is used to create larger vectors by concatenating smaller portions of a vector together.
+// {1'b1, 1'b0} = 2'b10;    //example
+
+
     // assign {w[7:0], x[7:0], y[7:0], z[7:0]} = {a[4:0], b[4:0], c[4:0], d[4:0], e[4:0], f[4:0], 2'b11};   //wrong method
 
     assign w = {a[4:0], b[4:2]};
