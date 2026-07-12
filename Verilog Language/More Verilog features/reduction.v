@@ -1,0 +1,10 @@
+module top_module (
+    input [7:0] in,
+    output parity); 
+
+//Create a circuit that will compute a parity bit for a 8-bit byte (which will add a 9th bit to the byte). 
+//We will use "even" parity, where the parity bit is just the XOR of all 8 data bits.
+
+    assign parity = ^in;
+    
+endmodule
