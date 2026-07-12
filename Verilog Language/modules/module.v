@@ -8,7 +8,7 @@ module top_module (
 );
 
 
-/*
+
     // Method 1 - Created an instance of "mod_a" named "instance1", and connected ports by name:
 
 	mod_a instance1 ( 
@@ -17,7 +17,7 @@ module top_module (
 		.out(out)	// Port "out" connects to wire "out" 
 				// (Note: mod_a's port "out" is not related to top_module's wire "out". 
 	);
-*/   
+  
 
 /*
 	// Method 2 - Created an instance of "mod_a" named "instance2", and connected ports by position:

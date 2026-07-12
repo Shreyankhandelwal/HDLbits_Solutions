@@ -6,10 +6,10 @@ module top_module (
 
 wire topAdd16, bottomAdd16;
 
-/*
+
 add16 instance1(.a(a[15:0]), .b(b[15:0]), .cin(0), .sum(sum[15:0]), .cout(topAdd16));
 add16 instance2(.a(a[31:16]), .b(b[31:16]), .cin(topAdd16), .sum(sum[31:16]), .cout(bottomAdd16));
-*/
+
 
 assign sum = {sum[31:16], sum[15:0]};
 

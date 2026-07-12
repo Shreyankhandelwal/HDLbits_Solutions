@@ -8,11 +8,11 @@ module top_module (
 //Declared as 8-bit vectors. if you don't mention the vector size, it'll assume them to be 1 bit scalars
 wire [7:0] q1,q2,q3;
 
-/*
+
 my_dff8 instance1(.clk(clk), .d(d), .q(q1));
 my_dff8 instance2(.clk(clk), .d(q1), .q(q2));
 my_dff8 instance3(.clk(clk), .d(q2), .q(q3));
-*/
+
 
 // This is one way to make a 4-to-1 multiplexer
 always @(*)		// Combinational always block

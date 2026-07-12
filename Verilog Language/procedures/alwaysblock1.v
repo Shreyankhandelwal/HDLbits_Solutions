@@ -1,0 +1,21 @@
+
+module top_module(
+    input a, 
+    input b,
+    output wire out_assign,
+    output reg out_alwaysblock
+);
+
+//Combinational always blocks are equivalent to assign statements, thus there is always a way to express a combinational circuit both ways.
+//For synthesizing hardware, two types of always blocks are relevant:
+
+//Combinational: always @(*)
+//Clocked: always @(posedge clk)   //this creates a set of flip-flops
+
+//A note on wire vs. reg: The left-hand-side of an assign statement must be a net type (e.g., wire), while the left-hand-side of a procedural assignment (in an always block) must be a variable type (e.g., reg). 
+//These types (wire vs. reg) have nothing to do with what hardware is synthesized, and is just syntax left over from Verilog's use as a hardware simulation language.
+
+assign out_assign = a & b;
+always @(*) out_alwaysblock = a&b;
+
+endmodule
