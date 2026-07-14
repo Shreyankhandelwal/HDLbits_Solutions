@@ -1,7 +1,7 @@
 // synthesis verilog_input_version verilog_2001
 module top_module (
     input [3:0] in,
-    output reg [1:0] pos  );
+    output reg [1:0] pos  );   //reg to be changed to wire if you go for method 3
 
 //A priority encoder is a combinational circuit that, when given an input bit vector, outputs the position of the first '1' bit in the vector. 
 
