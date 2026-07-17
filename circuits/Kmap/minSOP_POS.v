@@ -5,7 +5,12 @@ module top_module (
     input d,
     output out_sop,
     output out_pos
-); 
-    assign out_sop = (c&d)|(~a&~b&c);
-    assign out_pos = c&(~b|~c|d)&(~a|~c|d);
+);
+
+    // Minimum Sum-of-Products Form // we look at 1's and the don't care terms
+    assign out_sop = (c & d) | (~a & ~b & c);
+
+    // Minimum Product-of-Sums Form // we look at 0's and the don't care terms
+    assign out_pos = c & (~a | b) & (~b | d);
+
 endmodule
